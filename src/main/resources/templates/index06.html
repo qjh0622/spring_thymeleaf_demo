@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index06</title>
+</head>
+<body>
+
+<!--日期格式化 -->
+<div th:text="${#dates.format(date,'yyyy/MM/dd hh:mm:ss')}"></div>
+
+<div th:text="${#numbers.formatDecimal(double,1,2)}"></div>
+
+<br>
+
+<div th:if="${#strings.isEmpty(String)}">少时诵诗书</div>
+
+<br>
+<div th:if="${!#strings.isEmpty(String)}">你好啊</div>
+
+<br>
+
+
+<span th:text="${#strings.abbreviate(String ,30)}"></span>
+<br>
+
+
+<span th:text="${#strings.substring(String,0,29)}"></span>
+
+
+
+</body>
+</html>

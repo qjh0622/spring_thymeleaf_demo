@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index05</title>
+    <link  rel="stylesheet" type="text/html" href="../static/test.ftl" th:href="@{/test.ftl}">
+    <link rel="stylesheet" type="text/css" href="../static/pages-getOrderInfo.css" th:href="@{/pages-getOrderInfo.css}">
+</head>
+<body>
+<h1 th:text="${falge}"></h1>
+ <span th:if="${falge=='yes'}">河北邯郸</span>
+ <span th:unless="${falge=='yes'}">狗111</span>
+
+
+<div th:switch="${sasa}">
+    <h1 th:case="admin">user is admin</h1>
+    <h1 th:case="${menage}"> user is manage</h1>
+
+
+</div>
+
+
+<div th:insert="~{ footer:: ooo}">
+
+</div>
+<div th:include="~{footer:: ooo}"></div>
+
+<div th:replace="~{footer:: ooo}"></div>
+
+</body>
+</html>
